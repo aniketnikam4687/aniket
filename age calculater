@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Prompt the user for their birthdate
+read -p "Enter your birthdate (YYYY-MM-DD): " birthdate
+
+# Calculate the age
+current_year=$(date "+%Y")
+birth_year=$(date -d "$birthdate" "+%Y")
+age=$((current_year - birth_year))
+
+# Display the age
+echo "Your age is $age years."
